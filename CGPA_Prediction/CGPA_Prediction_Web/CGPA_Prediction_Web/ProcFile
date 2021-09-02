@@ -1,0 +1,1 @@
+web: gunicorn CGPA_Prediction_Web.wsgi
