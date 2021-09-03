@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+  </head>
+  <body>
+    <h1>Student CGPA prediction</h1>
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+      
+      <p>Daily social media interaction (rate in 0,1 or 2) :</p>
+      <input type="number" name="smedia">
+      <br>
+
+      <p>Programming Skills (rate from 1 to 10) : </p>
+      <input type="number" name="prog">
+      <br>
+
+      <p>Physical Activity (1 to 10) :</p>
+      <input type="number" name="pactivity">
+      <br>
+
+      <p> Class Attendance:</p>
+	<select name="attendance">
+	<option>Select from the list</option>
+                        <option value= "85%-95">85%-95%</option>
+                        <option value= "75%-85%">75%-85%</option>
+                        <option value= "65%-75%">65%-75%</option>
+                        <option value= "55%-65%">55%-65%</option>
+                        <option value= "below 55%">below 55%</option>
+                        </select>
+      
+
+     <p>Attention (1 to 10) :</p>
+     <input type="number" name="attention">
+      <br>
+
+<p>Reference from external sources (1 to 10) :</p>
+      <input type="number" name="reference">
+      <br>
+
+<p>Daily study duration (rate in 0,1, 2 or 3 ) :</p>
+      <input type="number" name="dailystudy">
+      <br>
+
+<p>study duration during exams (rate in 0,1, 2 or 3 ) :</p>
+      <input type="number" name="examstudy">
+      <br>
+      
+<p>Doubt Clearance (1 to 10) :</p>
+     <input type="number" name="doubtclear">
+      <br>      
+
+<p>SGPA 1 :</p>
+      <input type="number" name="S1">
+      <br>
+<p>SGPA 2 :</p>
+      <input type="number" name="S2">
+      <br>
+<p>SGPA 3 :</p>
+      <input type="number" name="S3">
+      <br>
+
+      <input type="submit" value='Get Predictions'>
+    </form>
+  </body>
+</html>
